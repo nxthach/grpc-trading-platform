@@ -11,7 +11,7 @@ import java.util.concurrent.TimeUnit;
 
 @RestController
 @RequestMapping("sse")
-public class HelloSSE {
+public class HelloSSEController {
 
     @GetMapping
     public SseEmitter helloSse(){
