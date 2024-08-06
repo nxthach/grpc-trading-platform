@@ -13,9 +13,10 @@ public class UserService {
     private UserServiceGrpc.UserServiceBlockingStub userClient;
 
     public UserInformation getUserInformation(Integer userId) {
-        return this.userClient.getUserInformation(UserInformationRequest.newBuilder()
+        var request = UserInformationRequest.newBuilder()
                 .setUserId(userId)
-                .build());
+                .build();
+        return this.userClient.getUserInformation(request);
     }
 
 }
